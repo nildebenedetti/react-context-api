@@ -39,7 +39,7 @@ function Navbar() {
             </div>
             <div className="right-sidebar">
                 <form className="container-fluid justify-content-start">
-                    <button onClick={btnModeHandler()} className="btn btn-sm btn-outline-danger" type="button">Modalità Povero</button>
+                    <button onClick={btnModeHandler} className="btn btn-sm btn-outline-danger" type="button">Modalità Povero</button>
                 </form>
             </div>
         </div>
