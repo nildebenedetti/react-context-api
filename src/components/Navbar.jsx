@@ -1,6 +1,19 @@
 import { Link, NavLink } from "react-router";
+import useBudget from "../hooks/useBudget";
+import { useState } from "react";
 
 function Navbar() {
+    const { budgetMode, setBudgetMode } = useBudget();
+
+    function btnModeHandler() {
+
+        setBudgetMode(!budgetMode);
+        console.log(budgetMode);
+
+    };
+
+
+
     return <nav className="navbar navbar-expand-lg bg-body-tertiary d-flex">
         <div className="container-fluid d-flex justify-content-between">
             <div className="left-navbar d-flex">
@@ -26,7 +39,7 @@ function Navbar() {
             </div>
             <div className="right-sidebar">
                 <form className="container-fluid justify-content-start">
-                    <button className="btn btn-sm btn-outline-danger" type="button">Modalità Povero</button>
+                    <button onClick={btnModeHandler()} className="btn btn-sm btn-outline-danger" type="button">Modalità Povero</button>
                 </form>
             </div>
         </div>
