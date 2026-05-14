@@ -2,7 +2,7 @@ import { BudgetContext, BudgetProvider } from "../contexts/BudgetContext";
 import { useContext } from "react";
 
 function useBudget() {
-    const BudgetContext = useContext(budgetProvider);
+    const BudgetContext = useContext(BudgetProvider);
 
     return BudgetContext;
 }
