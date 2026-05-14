@@ -37,20 +37,17 @@ function Product() {
         <div className="container pdp-container">
             <div class="row">
                 {/** il primo blocco con titolo - rating - img main  */}
-                <div class="col-12 col-lg-8 d-flex flex-column justify-content-center">
+                <div className="col-12 col-lg-8 d-flex flex-column justify-content-center">
                     <h1>{title}</h1>
                     <div className="rating">
                        {/* <p className="rating-p">{`${rate}/5 based on ${count} global contributors`}</p>*/}
                     </div>
-                    <div className="container object-fit-cover">
+                    <div className="container object-fit-cover py-4">
                         <img src={image} className="pdp-main-img" alt={title}></img>
                     </div>
                     <p className="pdp-price-text fw-bold">
                         <span>&euro; </span>{price}
                     </p>
-                </div>
-                {/** il secondo blocco con numero x in categoria - descrizione   */}
-                <div class="col-12 col-lg-4 d-flex flex-column justify-content-center">
                 <p className="pdp-text fw-bold score-in-category">{`#${id} rated in ${category}`}</p>
                 <p className="pdp-text pdp-description">{description}</p>
                 </div>
