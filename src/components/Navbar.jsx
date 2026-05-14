@@ -8,15 +8,7 @@ function Navbar() {
     function btnModeHandler() {
 
         setBudgetMode(!budgetMode);
-
     };
-
-    // SE btnTheme e' false
-        // allora il testo dentro il bottone e' 'Attiva Modalità Budget'
-        // && la varibile che mi gestisce la class diventa btn-success
-    // SE btnTheme e'true 
-        // allora il testo dentro il bottone e' 'disttiva Modalità Budget'
-        // && la varibile che mi gestisce la class diventa btn-warning
 
 
     return <nav className="navbar navbar-expand-lg bg-body-tertiary d-flex">
