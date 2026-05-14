@@ -8,10 +8,15 @@ function Navbar() {
     function btnModeHandler() {
 
         setBudgetMode(!budgetMode);
-        console.log(budgetMode);
 
     };
 
+    // SE btnTheme e' false
+        // allora il testo dentro il bottone e' 'Attiva Modalità Budget'
+        // && la varibile che mi gestisce la class diventa btn-success
+    // SE btnTheme e'true 
+        // allora il testo dentro il bottone e' 'disttiva Modalità Budget'
+        // && la varibile che mi gestisce la class diventa btn-warning
 
 
     return <nav className="navbar navbar-expand-lg bg-body-tertiary d-flex">
@@ -39,7 +44,10 @@ function Navbar() {
             </div>
             <div className="right-sidebar">
                 <form className="container-fluid justify-content-start">
-                    <button onClick={btnModeHandler} className="btn btn-sm btn-outline-danger" type="button">Modalità Povero</button>
+                    <button onClick={btnModeHandler} 
+                    className={`btn btn-sm ${budgetMode ? 'btn-outline-danger' : 'btn-outline-success'}`} type="button">
+                        {budgetMode ? 'Disattiva Modalità Povero' : 'Attiva Modalità Povero'}
+                        </button>
                 </form>
             </div>
         </div>
