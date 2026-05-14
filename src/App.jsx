@@ -6,15 +6,14 @@ import Prodotti from "./pages/Prodotti";
 import NotFound from "./pages/NotFound";
 import MainLayout from "./layouts/MainLayout";
 import Product from "./pages/Product";
-import { BudgetContext } from "./contexts/BudgetContext";
+import { BudgetContext, BudgetProvider } from "./contexts/BudgetContext";
 
 function App() {
 
   return (
-    
+    <BudgetProvider>
     <BrowserRouter>
       <Routes>
-
         <Route element={<MainLayout />}>
           <Route path="" element={<Home/>} />
 
@@ -30,6 +29,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </BudgetProviderdgetProvider>
   )
 }
 export default App;

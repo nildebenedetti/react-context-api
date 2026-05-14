@@ -1,4 +1,4 @@
-import { BudgetContext, budgetProvider } from "../contexts/BudgetContext";
+import { BudgetContext, BudgetProvider } from "../contexts/BudgetContext";
 import { useContext } from "react";
 
 function useBudget() {
