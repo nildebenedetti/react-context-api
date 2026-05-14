@@ -29,7 +29,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-    </BudgetProviderdgetProvider>
+    </BudgetProvider>
   )
 }
 export default App;
