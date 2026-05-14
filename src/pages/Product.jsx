@@ -35,7 +35,7 @@ function Product() {
 
     return <>
         <div className="container pdp-container">
-            <div class="row">
+            <div className="row">
                 {/** il primo blocco con titolo - rating - img main  */}
                 <div className="col-12 col-lg-8 d-flex flex-column justify-content-center">
                     <h1>{title}</h1>
