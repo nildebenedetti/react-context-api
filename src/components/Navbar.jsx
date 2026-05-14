@@ -22,6 +22,9 @@ function Navbar() {
                     </li>
                 </ul>
             </div>
+            <form className="container-fluid justify-content-start">
+                <button className="btn btn-sm btn-outline-warning" type="button">Modalità Povero</button>
+            </form>
         </div>
     </nav>
 }
