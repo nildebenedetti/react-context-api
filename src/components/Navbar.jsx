@@ -26,7 +26,7 @@ function Navbar() {
             </div>
             <div className="right-sidebar">
                 <form className="container-fluid justify-content-start">
-                    <button className="btn btn-sm btn-outline-warning" type="button">Modalità Povero</button>
+                    <button className="btn btn-sm btn-outline-danger" type="button">Modalità Povero</button>
                 </form>
             </div>
         </div>
