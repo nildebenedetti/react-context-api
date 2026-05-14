@@ -6,9 +6,12 @@ import Prodotti from "./pages/Prodotti";
 import NotFound from "./pages/NotFound";
 import MainLayout from "./layouts/MainLayout";
 import Product from "./pages/Product";
+import { BudgetContext } from "./contexts/BudgetContext";
 
 function App() {
+
   return (
+    
     <BrowserRouter>
       <Routes>
 
