@@ -2,6 +2,8 @@ import { Link, NavLink } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
 import ProductCard from "../components/ProductCard";
+import useBudget from "../hooks/useBudget";
+
 
 
 function Prodotti() {
@@ -10,6 +12,7 @@ function Prodotti() {
     e gestire eventuali trigger che verranno aggiunti in futuro*/}
 
     const [productList, setProductList] = useState([]);
+    const { budgetMode, setBudgetMode } = useBudget();
 
     {/* adesso devo scrivermi la fetch dei prodotti */ }
     useEffect(() => {
@@ -20,15 +23,21 @@ function Prodotti() {
                 return result.json();
             })
             .then(data => {
-                return setProductList(data);
-                console.log(productList);
-
+                if (budgetMode) {
+                    const listWithMode = data.filter(product => {
+                        const priceValue = Number(product.price)
+                        return priceValue <= 30;
+                    })
+                    setProductList(listWithMode);
+                } else {
+                    setProductList(data);
+                }
             })
             .catch(error => {
                 console.error('errore durnte importazione dati', error)
             })
 
-    }, []);
+    }, [budgetMode]);
 
 
 
@@ -43,12 +52,12 @@ function Prodotti() {
         </header>
         <div className="container d-flex justify-content-center mx-3">
             <div className="row g-2 d-flex flex-row justify-content-center align-items-flex-start">
-                    {productList.map(product => {
-                        return  <ProductCard
-                            key={product.id}    
-                            product={product}
-                            />
-                    })}
+                {productList.map(product => {
+                    return <ProductCard
+                        key={product.id}
+                        product={product}
+                    />
+                })}
             </div>
         </div>
 
